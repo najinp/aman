@@ -1,0 +1,115 @@
+.Wrapper {
+    height: 3000px;
+    background: #f3eee7;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f3eee7;
+    z-index: 999;
+    border-bottom: 1px solid #ddd;
+
+    .h_wrap {
+
+        display: flex;
+        justify-content: space-between;
+        line-height: 100px;
+        transition: 0.5s;
+
+
+        h1 {
+            font-size: 0;
+        }
+
+        h1 img {
+            height: 40px;
+            width: auto;
+            transition: 0.5s;
+        }
+
+        .h_left {
+            display: flex;
+            gap: 60px;
+
+            .Gnb ul {
+                display: flex;
+                gap: 40px;
+            }
+        }
+
+        .h_right {
+            display: flex;
+            gap: 40px;
+
+            .search {
+                position: relative;
+
+                .search_box {
+                    display: none;
+                    position: absolute;
+                    top: 80px;
+                    right: -65px;
+                    line-height: 1;
+                    border: 1px solid var(--gc);
+                    background: var(--lc);
+                    padding: 30px 50px;
+                    width: 600px;
+                    text-align: center;
+
+                    input[type="text"] {
+                        font-size: 20px;
+                        width: 450px;
+                        border: none;
+                        outline: none;
+                        border-bottom: 2px solid var(--dc);
+                    }
+
+                    button {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        font-size: 30px;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: -10px;
+                        right: 60px;
+                        width: 20px;
+                        height: 20px;
+                        background: var(--lc);
+                        border-left: 1px solid var(--gc);
+                        border-top: 1px solid var(--gc);
+                        transform: rotate(45deg);
+                    }
+
+                }
+            }
+
+            .search.on .search_box {
+                display: block;
+            }
+        }
+
+    }
+}
+
+.Header.on {
+    .h_wrap {
+        line-height: 80px;
+    }
+
+    h1 img {
+        height: 30px;
+        width: auto;
+    }
+}
