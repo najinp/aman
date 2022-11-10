@@ -1,6 +1,9 @@
 import { useRef, useState } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 
 
 const MAINV = [
@@ -15,10 +18,9 @@ const MainVisual = () => {
     return (
         <section className="MainVisual">
             <div className="container">
-                <Swiper
+                {/* <Swiper
                     centeredSlides={true}
                     spaceBetween={30}
-
                     slidesPerView={3}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
@@ -33,13 +35,13 @@ const MainVisual = () => {
                             )
                         })
                     }
-                </Swiper>
-                {/* <Slider
+                </Swiper> */}
+                <Slider
                     centerMode={true}
                     centerPadding={'300px'}
                     afterChange={index => setSlideNum(index)}
                     arrows={false}
-                    ref={MAINV}
+                    ref={SLIDE}
                     className={'mainvisual_slide'}
                 >
                     {
@@ -51,7 +53,7 @@ const MainVisual = () => {
                             )
                         })
                     }
-                </Slider> */}
+                </Slider>
                 <div className="box">
                     <div className="num">
                         0{slideNum + 1} <span>/ 0{MAINV.length}</span>

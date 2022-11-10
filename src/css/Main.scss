@@ -40,11 +40,85 @@
         }
     }
 
-
     .mainvisual_slide {
         img {
             height: 85vh;
             padding: 0 30px;
         }
     }
+}
+
+
+// ----------------------------메인콘텐츠
+
+.MainContent {
+    padding: 100px 0;
+
+    .imgbox {
+        overflow: hidden;
+        margin: 0 0 30px 0;
+    }
+
+    img {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        overflow: hidden;
+        margin: 0 0 30px 0;
+    }
+
+
+    h3 {
+        font-size: 27px;
+        margin: 0 0 15px 0;
+    }
+
+    p {
+        line-height: 1.45;
+        margin: 0 0 30px 0;
+    }
+
+
+    .inner {
+        display: flex;
+        gap: 100px;
+
+        .mc_left {
+
+            .can {
+
+
+                .mctextbox {
+                    padding: 10px 30px;
+                    background: #ddd;
+                    margin: 0 0 50px 0;
+
+                    tr {
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+        }
+
+
+        .mc_right {
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: -50px;
+                bottom: 0;
+                width: 1px;
+                background-color: #dfdfdf;
+            }
+        }
+    }
+
 }

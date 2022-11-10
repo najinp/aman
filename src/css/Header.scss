@@ -1,5 +1,5 @@
 .Wrapper {
-    height: 3000px;
+    // height: 3000px;
     background: #f3eee7;
 }
 
@@ -15,7 +15,7 @@
     width: 100%;
     background: #f3eee7;
     z-index: 999;
-    border-bottom: 1px solid #ddd;
+
 
     .h_wrap {
 
@@ -104,8 +104,10 @@
 }
 
 .Header.on {
+    border-bottom: 1px solid #ddd;
+
     .h_wrap {
-        line-height: 80px;
+        line-height: 70px;
     }
 
     h1 img {
